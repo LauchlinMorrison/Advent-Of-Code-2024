@@ -4,8 +4,7 @@ def parseInputToSortedLists(f):
     lines = f.readlines()
     list1 = []
     list2 = []
-    result = 0
-
+    
     for line in lines:
         l = line.replace("\n", "").split("   ")
         list1.append(int(l[0]))
