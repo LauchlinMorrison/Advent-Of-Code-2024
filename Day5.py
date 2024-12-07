@@ -1,4 +1,4 @@
-import aoclib.loader as loader
+import aoc2024.loader as loader
 
 lines = open(loader.input("5"), "r").readlines()
 lines = [l.replace("\n", "") for l in lines]

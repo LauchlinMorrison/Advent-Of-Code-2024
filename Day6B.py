@@ -1,4 +1,4 @@
-import aoclib.loader as loader
+import aoc2024.loader as loader
 import operator
 import itertools
 
