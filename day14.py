@@ -34,6 +34,8 @@ def part1(f):
     
     print(reduce(mul, quad))
 
+#For part two, I manually searched through the first 100 instances till I found an iteration which had something resembling a pattern.
+# Then I manually searched through jumping by that iter amount until the tree showed up.
 def part2(f):
     robots = []
     for line in f.readlines():
@@ -49,8 +51,5 @@ def part2(f):
         print(iteration)
         print("")
         #8179
-    
-
-
 
 part1(aoc.getInput()) if aoc.part() == 1 else part2(aoc.getInput())
