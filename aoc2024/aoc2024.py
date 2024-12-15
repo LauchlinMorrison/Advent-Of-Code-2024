@@ -15,7 +15,10 @@ def getInput():
             f = open(fileName, "w")
             f.write(text)
             f.close()
-    return open(fileName, "r")
+    fileHandle = open(fileName, "r")
+
+    if config["profilerEnabled"]: import aoc2024.simpletiming
+    return fileHandle
 
 def run(part1, part2):
     config = configurator.loadConfig()
@@ -26,18 +29,3 @@ def run(part1, part2):
 
 def part():
     return configurator.loadConfig()["part"]
-
-def generatenewDay(day):
-    print("Generating new day")
-    code = '''import aoc2024.aoc2024 as aoc
-
-def part1(f):
-    raise NotImplementedError("Part 1 not implemented")
-
-def part2(f):
-    raise NotImplementedError("Part 2 not implemented")
-
-part1(aoc.getInput()) if aoc.part() == 1 else part2(aoc.getInput())'''
-
-
-print("Loaded aoc")
