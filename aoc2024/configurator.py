@@ -52,7 +52,9 @@ def generateNextDay():
 
 def save():
     for k, v in settingsDict.items():
-        config[k] = v.get()
+        if type(config[k]) == int:
+            config[k] = int(v.get())
+        else: config[k] = v.get()
     
     with open(configFileName, "w", encoding='utf-8') as f:
         json.dump(config, f, ensure_ascii=False, indent=4)
