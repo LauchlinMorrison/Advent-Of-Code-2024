@@ -86,4 +86,3 @@ def part2(f):
     print(f"Total: {count}")
 
 part1(aoc.getInput()) if aoc.part() == 1 else part2(aoc.getInput())
-
