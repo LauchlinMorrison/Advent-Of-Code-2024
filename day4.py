@@ -57,12 +57,7 @@ def findMAS(y, x, maxY, maxX, matrix):
         (matrix[y-1][x+1] == 'S' and matrix[y+1][x-1] == "M"))): return True
 
 def part1(f):
-    lines = f.readlines()
-
-    matrix = []
-    for line in lines:
-        matrix.append(list(line))
-
+    matrix = [[*line] for line in f.readlines()]
     #print(matrix)
     count = 0
     y = 0
@@ -78,12 +73,7 @@ def part1(f):
     #print(matrix[1][1])
 
 def part2(f):
-    lines = f.readlines()
-
-    matrix = []
-    for line in lines:
-        matrix.append(list(line))
-
+    matrix = [[*line] for line in f.readlines()]
     count = 0
     y = 0
     while y < len(matrix):
