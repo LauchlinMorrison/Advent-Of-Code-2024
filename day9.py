@@ -2,8 +2,9 @@ import aoc2024.aoc2024 as aoc
 import itertools
 from collections import Counter
 
+emptyID = '.'
+
 def parseMem(f):
-    emptyID = '.'
     id = 0
     memory = []
     for pair in itertools.batched([int(i) for i in [*f.read()]], 2):
@@ -13,7 +14,6 @@ def parseMem(f):
     return memory
 
 def orderMem(mem):
-    emptyID = "."
     cursor = 0
     for i in range(len(mem)-1, 0, -1):
         if mem[i] != emptyID:
@@ -34,7 +34,6 @@ def checkSum(mem):
 
 def orderMem2(mem):
     counter = Counter(mem)
-    emptyID = "."
     for i in range(len(mem)-1, 0, -1):
         if mem[i] != emptyID:
             blockSize = counter[mem[i]]
