@@ -20,12 +20,5 @@ def getInput():
     if config["profilerEnabled"]: import aoc2024.simpletiming
     return fileHandle
 
-def run(part1, part2):
-    config = configurator.loadConfig()
-    part = config["part"]
-
-    if part == 1: part1(getInput())
-    if part == 2: part2(getInput())
-
 def part():
     return configurator.loadConfig()["part"]
